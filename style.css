@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 
 }
 .nav-container ul{
@@ -8,8 +10,8 @@
 }
 .nav-container{
     display: grid;
-    grid-template-columns: 3fr 40px; 
-    grid-template-rows: 3fr;
+    grid-template-columns: 2fr ; 
+    grid-template-rows: 2fr;
 }
 .list{
     font-size: 30px;
@@ -36,7 +38,7 @@
 .resume{
     grid-column: 2;
     grid-row: 1;
-   
+
 }
 .examples{
     grid-column: 3;
@@ -47,4 +49,53 @@
     background-color: black;
     color: white;
     text-align: center;
+    display: grid;
+    grid-template-columns: 2fr ;
+    grid-template-rows: 2fr 200px;
+    justify-content: center;
+    height: 400px;
+    
+}
+.h1{
+    margin-top: 10px;
+    grid-row: 1;
+    grid-column:span 2;
+    text-align: center;
+}
+.metext{
+    font-size: 20px;
+    border: solid;
+    border-color: white;
+    border-radius: 15px;
+    height: 100px;
+    text-align: center;
+    text-overflow: none;
+    width: 300px;
+    height: 200px;
+    padding-top: 25px;
+    justify-items: center;
+}
+.text-contain{
+    grid-row: 2;
+    grid-column: 2;
+    padding-right: 300px;
+    
+}
+.pfp{
+    width: 100px;
+    height: 100px;
+    grid-row: 2;
+    grid-column: 1;
+    border-radius: 15px;
+    place-self: center;
+    margin-top: -30px;
+    margin-left: 100px;
+    
+}
+.metext:hover{
+    background-color: grey;
+    transform:scale(1.002);
+    border: solid;
+    border-color: white;
+    border-radius: 15px;
 }
