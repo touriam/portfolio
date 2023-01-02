@@ -69,16 +69,18 @@ a{
 .examples:hover{
     box-shadow: 2px 2px 8px 0 white;
     border-radius: 4px;
+
 }
+
 .about-container{
     
-    color: black;
+    
     text-align: center;
     display: grid;
     grid-template-columns: 2fr ;
     grid-template-rows: 2fr 200px;
     justify-content: center;
-    height: 400px;
+    height: 100vh;
     background: rgb(238,174,202);
     background: radial-gradient( rgba(238,174,202,1) 20%, rgba(148,203,233,1) 100%);
 }
@@ -114,7 +116,9 @@ a{
     grid-column: 2;
     padding-right: 150px;
     grid-gap: 10px;
-    
+   
+    place-self: center;
+
 }
 .pfp{
     width: 150px;
@@ -123,9 +127,8 @@ a{
     grid-column: 1;
     
     place-self: center;
-    margin-top: -30px;
+    
     margin-left: 100px;
-    margin-top: 5px;
     border-radius: 15px;
 }
 nav:hover{
@@ -135,7 +138,7 @@ nav:hover{
     
     transform:scale(1.02); 
     border-radius: 15px;
-    box-shadow: 1px 0 2px 0 white;
+    box-shadow: 1px 0 4px 0 white;
 }
 .pfp:hover{
     transform: scale(1.02);
