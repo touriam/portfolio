@@ -4,7 +4,10 @@
     padding: 0;
     
 }
-body{min-height: 400px;}
+body{
+    background: rgb(238,174,202);
+    background: radial-gradient( rgba(238,174,202,1) 20%, rgba(148,203,233,1) 100%);
+}
 nav{
     border-bottom: solid;
     border-color: white;
@@ -25,8 +28,8 @@ nav{
     display: grid;
     grid-template-columns: 2fr ; 
     grid-template-rows: 2fr;
-    background: rgb(238,174,202);
-    background: linear-gradient(10deg, rgba(238,174,202,1)0%, rgba(148,203,233,1) 100%);
+    /* background: rgb(238,174,202);
+    background: linear-gradient(10deg, rgba(238,174,202,1)0%, rgba(148,203,233,1) 100%); */
     overflow: hidden;
 
 }
@@ -44,7 +47,7 @@ a{
     color: white;
 }
 /* .nav-container:hover{
-   
+
     cursor: pointer;
     
 } */
@@ -76,29 +79,29 @@ a{
 }
 
 .about-container{
-    
-    
-    text-align: center;
+
     display: grid;
-    grid-template-columns: 2fr ;
-    /* grid-template-rows: repeat(2fr 200px); */
-    justify-content: center;
+    grid-template-columns: repeat(2fr) ;
+    grid-template-rows: repeat(auto);
+    
     height: 100vh;
     background: rgb(238,174,202);
     background: radial-gradient( rgba(238,174,202,1) 20%, rgba(148,203,233,1) 100%);
 }
 .h1{
     margin-top: 10px;
-    grid-row: 1;
-    grid-column:span 2;
+    
     text-align: center;
     color: white;
+    
 }
 .h1text{
     grid-row: 1;
-    grid-column:span 2;
-
+    grid-column: span 2;
+    
 }
+
+
 
 .metext{
     font-size: 20px;
@@ -115,28 +118,33 @@ a{
     
     
 }
-.text-contain{
-    grid-row: 2;
+/* .text{
     grid-column: 2;
-    padding-right: 150px;
-    grid-gap: 10px;
+    grid-row: 2;
+} */
+
+.text{
+    grid-column: 2;
+    grid-row: 2;
+    margin: auto;
+}
+.text-contain{
     
     place-self: center;
-    margin-top: -245px;
 }
 
 .pfp-contain{
     grid-row: 2;
     grid-column: 1;
+    margin: auto;
 }
 
 .pfp{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     
     place-self: center;
-    margin-top: -250px;
-    margin-left: 100px;
+    
     border-radius: 15px;
 }
 nav:hover{
@@ -161,7 +169,8 @@ nav:hover{
         display: grid;
         grid-template-columns: repeat(6fr);
         grid-template-rows: auto;
-        
+        align-items: center;
+        justify-items: center;
     }
     
     .h1text{
@@ -173,21 +182,16 @@ nav:hover{
     
     .pfp-contain {
         grid-column: 1 / 6;
-        grid-row: 2 / 3;
-        border: solid;
-        
-        
+        grid-row: 2 / 3;  
     }
     .pfp{
-        margin: 0;
-        
+        margin: 0;   
     }
     
     .text{
-        border: solid;
         grid-row: 4;
         grid-column:1 / 6;
-        justify-items: center;
+        
     }
     .text-contain{
         margin: 0;
