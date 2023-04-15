@@ -28,13 +28,20 @@ function emailCheck(){
     emailField.style.borderBottomColor= "red";
     return false;
 }
+if(!emailField.value.match(validation)){
+    emailError.innerHTML = "Please enter a valid email";
+    emailField.style.borderBottomColor= "red";
+    return false;
+}
 
 if(emailField.value.match(validation)){
     emailError.innerHTML = "";
     emailField.style.borderBottomColor= "green";
     return true;
 }
-
+else{
+    return true;
+}
 }
 
 
