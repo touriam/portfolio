@@ -44,6 +44,30 @@ else{
 }
 }
 
+const numberLabel = document.getElementById('number-label');
+const numberField = document.getElementById('number-field');
+const numberError = document.getElementById('number-error')
+
+let numberValidation = ("^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$");
+
+function numberCheck() {
+    if (numberField.value.match(numberValidation)){
+        numberField.style.borderBottomColor ="green";
+        return true;
+    }
+    if (!numberField.value.match(numberValidation)){
+        numberField.style.borderBottomColor ="red";
+        numberError.innerHTML = "Please Enter a Valid number";
+        return false;
+    }
+    if (numberField.value = ""){
+        numberError.innerHTML = "Please enter a phone number";
+        return false;
+    }
+    else()=>{
+        return true;
+    }
+}
 
 
 
