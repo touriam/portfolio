@@ -50,11 +50,21 @@ message.onkeyup =()=>{
 
 const numberError= document.getElementById('number-error');
 const numberField= document.getElementById('number-field');
-
+const numberValidator = /[0-9]/;
 numberField.addEventListener('input',()=>{
-    if(numberField.value===''){numberError.innerHTML= ('please enter a phone number')}
+    if(numberField.value==='')
+    {numberError.innerHTML= ('please enter a phone number')}
+   if(!numberField.value.match(numberValidator)){
+        numberField.style.borderBottomColor ="red";
+         numberError.innerHTML = "please enter a valid number";
+         return  false;
+    }
+    if(numberField.value.match(numberValidator)){
+        numberField.style.borderBottomColor ="green";
+         numberError.innerHTML = "";
+         return  true;
+    }
 
-    
 })
 
-
+ 
