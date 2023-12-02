@@ -15,6 +15,30 @@ hamburger.addEventListener("click", function(){
     
     })
 
+
+const nameField = document.getElementById('name-field');
+const nameError = document.getElementById('name-error');
+const nameRegx = /[a-zA-Z]/;
+
+nameField.addEventListener('input',()=>{
+     
+    if(nameField.value.match(nameRegx)){
+        nameField.style.borderBottomColor= "green";
+        
+        return true;
+    }
+    
+    
+    if(nameField.value==""){
+        nameField.style.borderBottomColor= "red";
+        nameError.innerHTML= "please enter your name";
+        return false;
+    }
+})
+
+
+
+
 const emailLabel = document.getElementById('email-label');
 const emailField = document.getElementById('email-field');
 const emailError = document.getElementById('email-error');
