@@ -32,6 +32,7 @@ nameField.addEventListener('input',()=>{
     if(nameField.value==""){
         nameField.style.borderBottomColor= "red";
         nameError.innerHTML= "please enter your name";
+        nameError.style.font ="red"
         return false;
     }
 })
