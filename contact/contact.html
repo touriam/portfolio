@@ -35,7 +35,7 @@
             <h2 class = "title">Contact me</h2>
             <div  class="name-item item">
             <label for = "name">Your Name</label>
-            <input type ="text" id ="name" class="input-item" placeholder ="John Smith" required>
+            <input type ="text" id ="name" class="input-item" required>
             </div>
             
             <div  class="email-item item">
@@ -47,13 +47,15 @@
             
             <div  class="number-item item" >
             <label id ="number-label" for = "number">Your Number</label>
-            <input type ="text" id ="number-field" class="input-item" placeholder ="Your Number"  required>
+            <input type ="tel" inputmode="numeric" id ="number-field" class="input-item"  maxlength="10">
             <span id="number-error"></span>
             </div>
             
             <div  class="message-item item">
-            <label for = "message">Enter A Message</label>
-            <textarea id = "message" class="input-item" rows = "3" ></textarea>
+            <p  >Enter A Message</p>
+            <textarea id = "message" class="input-item" rows = "3" maxlength="150";></textarea>
+            <p id="message-counter"> 150</p>
+        
             </div>
 
             <div  class="btn-item item">

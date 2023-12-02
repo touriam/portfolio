@@ -18,7 +18,7 @@ hamburger.addEventListener("click", function(){
 const emailLabel = document.getElementById('email-label');
 const emailField = document.getElementById('email-field');
 const emailError = document.getElementById('email-error');
-
+const clickAway = document.getElementsByClassName('container');
 const validation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 function emailCheck(){
@@ -39,37 +39,22 @@ if(emailField.value.match(validation)){
     emailField.style.borderBottomColor= "green";
     return true;
 }
-else{
-    return true;
-}
-}
+};
 
-const numberLabel = document.getElementById('number-label');
-const numberField = document.getElementById('number-field');
-const numberError = document.getElementById('number-error')
+const message = document.getElementById('message');
+const messageCounter = document.getElementById('message-counter');
+maxlength = message.getAttribute("maxlength");
+message.onkeyup =()=>{
+    messageCounter.innerHTML = maxlength - message.value.length;
+};
 
-let numberValidation = ("^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$");
+const numberError= document.getElementById('number-error');
+const numberField= document.getElementById('number-field');
 
-function numberCheck() {
-    if (numberField.value.match(numberValidation)){
-        numberField.style.borderBottomColor ="green";
-        return true;
-    }
-    if (!numberField.value.match(numberValidation)){
-        numberField.style.borderBottomColor ="red";
-        numberError.innerHTML = "Please Enter a Valid number";
-        return false;
-    }
-    if (numberField.value = ""){
-        numberError.innerHTML = "Please enter a phone number";
-        return false;
-    }
-    else()=>{
-        return true;
-    }
-}
+numberField.addEventListener('input',()=>{
+    if(numberField.value===''){numberError.innerHTML= ('please enter a phone number')}
 
-
-
+    
+})
 
 
