@@ -19,20 +19,23 @@ hamburger.addEventListener("click", function(){
 const nameField = document.getElementById('name-field');
 const nameError = document.getElementById('name-error');
 const nameRegx = /[a-zA-Z]/;
-
 nameField.addEventListener('input',()=>{
      
     if(nameField.value.match(nameRegx)){
         nameField.style.borderBottomColor= "green";
-        
+        nameError.innerHTML ="";
         return true;
     }
-    
-    
-    if(nameField.value==""){
-        nameField.style.borderBottomColor= "red";
+    if(!nameField.value.match(nameRegx)){
         nameError.innerHTML= "please enter your name";
-        nameError.style.font ="red"
+        nameField.style.borderBottomColor= "red";
+        return false;
+    }
+    
+    if(nameField.value===""){
+        nameField.style.borderBottomColor= "red";
+        
+        
         return false;
     }
 })
