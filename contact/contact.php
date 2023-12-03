@@ -1,72 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php
 
-    <link rel="stylesheet" href="/contact/contact.css"></link>
-    <script defer src="/contact/conact.js"></script>
-    <title>contact</title>
-</head>
-<body>
-    <div class = "nav-container">
-    
-        <ul>
-            <li class="list me"><a href ="/index.html">About Me</a></li>
-            <li class="list resume"><a href="">Resume</a></li>
-            <li class="list examples"><a href ="">Examples</a></li>
-            <p><li class="list contact"><a href ="contact/contact.html">Contact Me</a></li></p>
-
-        </ul>
-</div> 
-
-    <div class="hamburger dropdown">
-            <span class = "bar"></span>
-            <span class = "bar"></span>
-            <span class = "bar"></span>
-    </div>  
-
-    
-        
-        <form class="container">
-            <!-- <fieldset> -->
-            <!-- <p>Contact me</p> -->
-            <h2 class = "title">Contact me</h2>
-            <div  class="name-item item">
-            <label for = "name">Your Name</label>
-            <input type ="text" id ="name-field" class="input-item" maxlength="40" required>
-            <p id="name-error"></p>
-            </div>
-            
-            <div  class="email-item item">
-            <label id="email-label" for = "email">Email</label>
-            <input type ="email" id ="email-field"  class="input-item" spellcheck="false" onkeydown="emailCheck()">
-            <span id="email-error"></span>
-
-        </div>
-            
-            <div  class="number-item item" >
-            <label id ="number-label" for = "number">Your Number</label>
-            <input type ="tel" inputmode="numeric" id ="number-field" class="input-item"  maxlength="10">
-            <span id="number-error"></span>
-            </div>
-            
-            <div  class="message-item item">
-            <p  >Enter A Message</p>
-            <textarea id = "message" class="input-item" rows = "3" maxlength="150";></textarea>
-            <p id="message-counter"> 150</p>
-        
-            </div>
-
-            <div  class="btn-item item">
-            <button id ="subBtn" type ="button" value ="submit">Send</button>
-            </div>  
-            <!-- </fieldset> -->
-            </form>
-    
-    
-
-
-</body>
-</html>
+$name =$_POST['name'];
+$email =$_POST['email'];
+$number =$_POST['number'];
+$message =$_POST['message'];
+?>
