@@ -35,32 +35,32 @@
             <h2 class = "title">Contact me</h2>
             <div  class="name-item item">
             <label for = "name">Your Name</label>
-            <input type ="text" id ="name-field" class="input-item" maxlength="40" required>
+            <input name ="name" type ="text" id ="name-field" class="input-item" maxlength="40" required>
             <p id="name-error"></p>
             </div>
             
             <div  class="email-item item">
             <label id="email-label" for = "email">Email</label>
-            <input type ="email" id ="email-field"  class="input-item" spellcheck="false" onkeydown="emailCheck()">
+            <input name ="email" type ="email" id ="email-field"  class="input-item" spellcheck="false" onkeydown="emailCheck()">
             <span id="email-error"></span>
 
         </div>
             
             <div  class="number-item item" >
             <label id ="number-label" for = "number">Your Number</label>
-            <input type ="tel" inputmode="numeric" id ="number-field" class="input-item"  maxlength="10">
+            <input name ="number" type ="tel" inputmode="numeric" id ="number-field" class="input-item"  maxlength="10">
             <span id="number-error"></span>
             </div>
             
             <div  class="message-item item">
             <p  >Enter A Message</p>
-            <textarea id = "message" class="input-item" rows = "5" maxlength="150";></textarea>
+            <textarea name ="messsage" id = "message" class="input-item" rows = "5" maxlength="150";></textarea>
             <p id="message-counter"> 150</p>
         
             </div>
 
             <div  class="btn-item item">
-            <button id ="subBtn" type ="button" value ="submit">Send</button>
+            <button name="submit" id ="subBtn" type ="button" value ="submit">Send</button>
             </div>  
             <!-- </fieldset> -->
             </form>

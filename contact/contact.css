@@ -204,7 +204,7 @@ input:focus, textarea:focus, select:focus{
     
 }
 #email-error{
-    color: red;
+    color: black;
 }
 
 /*media queries*/
