@@ -18,7 +18,8 @@ hamburger.addEventListener("click", function(){
 
 const nameField = document.getElementById('name-field');
 const nameError = document.getElementById('name-error');
-const nameRegx = /[a-zA-Z]/;
+const nameRegx = /[a-z A-Z]/;
+
 nameField.addEventListener('input',()=>{
      
     if(nameField.value.match(nameRegx)){
